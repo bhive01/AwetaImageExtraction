@@ -2,6 +2,12 @@ import sys
 import os
 import time
 
+try:
+    directory_name=sys.argv[1]
+    print(directory_name)
+except:
+    print('Please pass directory_name')
+
 filelist = os.listdir(directory_name)
 
 filecount = [x[4:7] for x in filelist]
@@ -20,8 +26,4 @@ for x in range(1,looper):
   #send assembled system command
   os.system(montagename)
   
-try:
-    directory_name=sys.argv[1]
-    print(directory_name)
-except:
-    print('Please pass directory_name')
+
