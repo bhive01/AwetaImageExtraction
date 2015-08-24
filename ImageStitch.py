@@ -22,7 +22,7 @@ for val in filecount:
 looper = max(filedigits)
 
 for x in range(1,looper):
-  montagename = 'find . -name \"file%03d*.png\" -print0 | cat - <(echo -ne \"montage%03d.png\0\") | xargs -0 montage -tile x4 -geometry +0+0' % (x, x)
+  montagename = 'find . -name \"file%03d*.png\" -print0 | cat - <(echo -ne \"montage%03d.png\") | xargs -0 montage -tile x4 -geometry +0+0' % (x, x)
   #send assembled system command
   os.system(montagename)
   
