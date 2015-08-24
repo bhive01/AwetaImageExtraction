@@ -81,7 +81,7 @@ def dumpimgs(filename,outdir):
 						raise ValueError('illegal value for channels: %d' % channels)
 
 					offset = fp.tell()
-					imgname = pjoin(outdir,"file%02d_coll%02d_img%02d_off%d_%s_%dx%d.png" % (file_count, coll+1, i+1, offset, mode.lower(), width, height))
+					imgname = pjoin(outdir,"file%03d_coll%02d_img%02d_off%d_%s_%dx%d.png" % (file_count, coll+1, i+1, offset, mode.lower(), width, height))
 					log(imgname)
 					data = fp.read(width * height * channels)
 					img = Image.frombuffer(mode,(width,height),data,'raw',mode,0,1)
