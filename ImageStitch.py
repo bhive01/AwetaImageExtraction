@@ -2,8 +2,7 @@ import sys
 import os
 import time
 
-
-filelist = os.listdir('directory goes here')
+filelist = os.listdir(directory_name)
 
 filecount = [x[4:7] for x in filelist]
 
